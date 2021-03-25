@@ -21,10 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/index', indexRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/computation',computRouter)
-app.use('/mydate',mydataRouter)
+app.use('/mydata',mydataRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
